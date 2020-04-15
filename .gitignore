@@ -3,3 +3,10 @@
 ################################################################################
 
 /MVC 5 .NET Core Migrated Application/.vs/ContosoUniversity
+/MVC 5 .NET Core Migrated Application/ContosoUniversity/bin
+/MVC 5 .NET Core Migrated Application/ContosoUniversity/obj/Debug/netcoreapp3.1
+/MVC 5 .NET Core Migrated Application/ContosoUniversity/obj/project.assets.json
+/MVC 5 .NET Core Migrated Application/ContosoUniversity/obj/ContosoUniversity.csproj.nuget.g.targets
+/MVC 5 .NET Core Migrated Application/ContosoUniversity/obj/ContosoUniversity.csproj.nuget.g.props
+/MVC 5 .NET Core Migrated Application/ContosoUniversity/obj/ContosoUniversity.csproj.nuget.dgspec.json
+/MVC 5 .NET Core Migrated Application/packages/Antlr.3.4.1.9004

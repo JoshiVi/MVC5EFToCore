@@ -1,0 +1,169 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+	  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	  <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+	  <EnableDefaultContentItems>false</EnableDefaultContentItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="packages.config" />
+    <None Remove="Web.config" />
+    <None Remove="Web.Debug.config" />
+    <None Remove="Web.Release.config" />
+  </ItemGroup>
+	<ItemGroup>
+		<Compile Include="Controllers\CourseController.cs" />
+		<Compile Include="Controllers\DepartmentController.cs" />
+		<Compile Include="Controllers\HomeController.cs" />
+		<Compile Include="Controllers\InstructorController.cs" />
+		<Compile Include="Controllers\StudentController.cs" />
+		<Compile Include="DAL\SchoolConfiguration.cs" />
+		<Compile Include="DAL\SchoolContext.cs" />
+		<Compile Include="DAL\SchoolInitializer.cs" />
+		<Compile Include="DAL\SchoolInterceptorLogging.cs" />
+		<Compile Include="DAL\SchoolInterceptorTransientErrors.cs" />
+		<Compile Include="Logging\ILogger.cs" />
+		<Compile Include="Logging\Logger.cs" />
+		<Compile Include="Migrations\201411021828194_InitialCreate.cs" />
+		<Compile Include="Migrations\201411021828194_InitialCreate.Designer.cs">
+			<DependentUpon>201411021828194_InitialCreate.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Migrations\201411021834484_MaxLengthOnNames.cs" />
+		<Compile Include="Migrations\201411021834484_MaxLengthOnNames.Designer.cs">
+			<DependentUpon>201411021834484_MaxLengthOnNames.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Migrations\201411021841373_ComplexDataModel.cs" />
+		<Compile Include="Migrations\201411021841373_ComplexDataModel.Designer.cs">
+			<DependentUpon>201411021841373_ComplexDataModel.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Migrations\201411021957458_DepartmentSP.cs" />
+		<Compile Include="Migrations\201411021957458_DepartmentSP.Designer.cs">
+			<DependentUpon>201411021957458_DepartmentSP.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Migrations\201411022009135_RowVersion.cs" />
+		<Compile Include="Migrations\201411022009135_RowVersion.Designer.cs">
+			<DependentUpon>201411022009135_RowVersion.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Migrations\201411022351064_Inheritance.cs" />
+		<Compile Include="Migrations\201411022351064_Inheritance.Designer.cs">
+			<DependentUpon>201411022351064_Inheritance.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Migrations\Configuration.cs" />
+		<Compile Include="Models\Course.cs" />
+		<Compile Include="Models\Department.cs" />
+		<Compile Include="Models\Enrollment.cs" />
+		<Compile Include="Models\Instructor.cs" />
+		<Compile Include="Models\OfficeAssignment.cs" />
+		<Compile Include="Models\Person.cs" />
+		<Compile Include="Models\Student.cs" />
+		<Compile Include="ViewModels\AssignedCourseData.cs" />
+		<Compile Include="ViewModels\EnrollmentDateGroup.cs" />
+		<Compile Include="ViewModels\InstructorIndexData.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Content\bootstrap.css" />
+		<Content Include="Content\bootstrap.min.css" />
+		<Content Include="Content\PagedList.css" />
+		<Content Include="favicon.ico" />
+		<Content Include="fonts\glyphicons-halflings-regular.svg" />
+		<Content Include="Content\Site.css" />
+		<Content Include="Scripts\bootstrap.js" />
+		<Content Include="Scripts\bootstrap.min.js" />
+		<None Include="Scripts\jquery-1.10.2.intellisense.js" />
+		<Content Include="Scripts\jquery-1.10.2.js" />
+		<Content Include="Scripts\jquery-1.10.2.min.js" />
+		<None Include="Scripts\jquery.validate-vsdoc.js" />
+		<Content Include="Scripts\jquery.validate.js" />
+		<Content Include="Scripts\jquery.validate.min.js" />
+		<Content Include="Scripts\jquery.validate.unobtrusive.js" />
+		<Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+		<Content Include="Scripts\modernizr-2.6.2.js" />
+		<Content Include="Scripts\respond.js" />
+		<Content Include="Scripts\respond.min.js" />
+		<Content Include="Scripts\_references.js" />
+		<Content Include="Views\_ViewStart.cshtml" />
+		<Content Include="Views\Shared\Error.cshtml" />
+		<Content Include="Views\Shared\_Layout.cshtml" />
+		<Content Include="Views\Home\About.cshtml" />
+		<Content Include="Views\Home\Contact.cshtml" />
+		<Content Include="Views\Home\Index.cshtml" />
+		<Content Include="Scripts\jquery-1.10.2.min.map" />
+		<Content Include="Views\Student\Create.cshtml" />
+		<Content Include="Views\Student\Delete.cshtml" />
+		<Content Include="Views\Student\Details.cshtml" />
+		<Content Include="Views\Student\Edit.cshtml" />
+		<Content Include="Views\Student\Index.cshtml" />
+		<Content Include="Views\Course\Create.cshtml" />
+		<Content Include="Views\Course\Delete.cshtml" />
+		<Content Include="Views\Course\Details.cshtml" />
+		<Content Include="Views\Course\Edit.cshtml" />
+		<Content Include="Views\Course\Index.cshtml" />
+		<Content Include="Views\Instructor\Create.cshtml" />
+		<Content Include="Views\Instructor\Delete.cshtml" />
+		<Content Include="Views\Instructor\Details.cshtml" />
+		<Content Include="Views\Instructor\Edit.cshtml" />
+		<Content Include="Views\Instructor\Index.cshtml" />
+		<Content Include="Views\Department\Create.cshtml" />
+		<Content Include="Views\Department\Delete.cshtml" />
+		<Content Include="Views\Department\Details.cshtml" />
+		<Content Include="Views\Department\Edit.cshtml" />
+		<Content Include="Views\Department\Index.cshtml" />
+		<Content Include="Views\Course\UpdateCourseCredits.cshtml" />
+	</ItemGroup>
+
+	<!--
+	<ItemGroup>
+		<Folder Include="App_Data\" />
+	</ItemGroup>
+	-->
+	
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Migrations\201411021828194_InitialCreate.resx">
+			<DependentUpon>201411021828194_InitialCreate.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Migrations\201411021834484_MaxLengthOnNames.resx">
+			<DependentUpon>201411021834484_MaxLengthOnNames.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Migrations\201411021841373_ComplexDataModel.resx">
+			<DependentUpon>201411021841373_ComplexDataModel.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Migrations\201411021957458_DepartmentSP.resx">
+			<DependentUpon>201411021957458_DepartmentSP.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Migrations\201411022009135_RowVersion.resx">
+			<DependentUpon>201411022009135_RowVersion.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Migrations\201411022351064_Inheritance.resx">
+			<DependentUpon>201411022351064_Inheritance.cs</DependentUpon>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Include="Program.cs" />
+	  <Compile Include="Startup.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="EntityFramework" Version="6.4.0" />
+	  <PackageReference Include="PagedList.Core.Mvc" Version="3.0.0" />
+	  <PackageReference Include="X.PagedList.Mvc.Core" Version="8.0.5" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="C:\Users\NET2CoreTest\Downloads\ASP.NET MVC\CS\ContosoUniversity\Controllers\CourseController.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="C:\Users\NET2CoreTest\Downloads\ASP.NET MVC\CS\ContosoUniversity\Controllers\HomeController.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	</ItemGroup>
+
+</Project>
